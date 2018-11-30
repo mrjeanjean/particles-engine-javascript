@@ -1,0 +1,36 @@
+body{
+  margin: 0;
+  font-family: 'Roboto Slab';
+}
+
+section{
+  padding: 3rem;
+  margin-top: 500px;
+  margin-bottom: 500px;
+  background-color: #313033;
+  color: #ffffff;
+  position: relative;
+
+  h1{
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 0;
+  }
+
+  div{
+    color: #a9adae;
+  }
+
+  canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.container{
+  max-width: 80%;
+  margin: 0 auto;
+}
