@@ -38,7 +38,7 @@ class ParticlesEmitter {
                 MathHelper.random(0, this.size.height),
                 MathHelper.random(5,10),
                 this.sprite,
-                scale - 0.3
+                MathHelper.random(0.3, 0.6, false) //MathHelper.random(1, 2, false)
             );
 
             this.container.addChild(particle);

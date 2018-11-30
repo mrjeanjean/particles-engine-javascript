@@ -2,7 +2,7 @@ require('pixi.js');
 import MathHelper from './math.helper';
 
 class Particle extends PIXI.Sprite {
-    constructor(x, y, speed, sprite, bounds, scale = 1) {
+    constructor(x, y, speed, sprite, scale = 1) {
         super();
         this.texture = PIXI.Texture.fromImage(sprite);
         this.origin = {
@@ -14,6 +14,7 @@ class Particle extends PIXI.Sprite {
         this.y = y;
         this.life = 0;
         this.lifeTime = MathHelper.random(500, 800);
+        this.particleScale = scale;
 
         this.init();
     }
@@ -21,7 +22,7 @@ class Particle extends PIXI.Sprite {
     init() {
         this.x = this.origin.x;
         this.y = this.origin.y;
-        this.scale.set(MathHelper.random(0.3, 0.6, false));
+        this.scale.set(this.particleScale);
 
         this.setRandomDestination();
     }
